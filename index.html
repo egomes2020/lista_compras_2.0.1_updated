@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!-- logo do app -->
+    <link rel='manifest' href='/manifest.json'>
+    <meta name="theme-color" content="#4d89e4" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Compras</title>
+
+    <!-- style css & font awsome -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" <
+        crossorigin="anonymous" />
+
+    <!-- favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+    <link rel="manifest" href="image/site.webmanifest">
+    <!-- <link rel="stylesheet" href="/css/font-awesome.css"/> -->
+</head>
+
+<body>
+
+
+
+
+    <!--SERVICE WORKER--->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/sw.js')
+                .then(function () { console.log("Service Worker Registered"); });
+        }
+
+    </script>
+
+
+
+
+
+
+
+    <!-- Loader Section -->
+    <div class="loader-div">
+        <iframe src="https://giphy.com/embed/3o7bu3XilJ5BOiSGic" width="480" height="480" frameBorder="0"
+            class="giphy-embed loader" allowFullScreen></iframe>
+    </div>
+
+
+    <div class="wrapper">
+
+        <div class="logo-h1">
+            <h2> <em> Powered By</em></h2>
+            <img src="image/black_code_logo-removebg-preview.png" alt="">
+        </div>
+
+        <div id="container">
+            <header id="header">
+
+                <h1>lista de compras <i id="icon-h1" class="fas fa-shopping-cart"></i> </h1>
+
+                <div id="clear-btn">
+                    <i class="fas fa-sync"></i>
+                </div>
+
+                <div class="date">
+                    <p id="pdate">Sábado, 05 de Set, de 2020</p>
+                </div>
+
+            </header>
+
+            <section id="content">
+
+                <ul id="list">
+
+
+
+                    <!-- li created with javascript -->
+
+                    <!-- <li class="list-item"  contenteditable="true"><i class="far fa-circle" job="complete"></i><p> drink coffe <i class="fas fa-trash-alt de" job="delete"></i></p></i></li>
+                <li class="list-item"  contenteditable="true"><i class="far fa-check-circle" job="complete"></i><p><del> drink milk</del><i class="fas fa-trash-alt" job="delete"></i></p></i></li> -->
+
+                </ul>
+                <a href="" target="">
+                    <i id="shareIcon" class="fas fa-share-alt"></i>
+                </a>
+
+            </section>
+
+            <footer id="footer-cont">
+                <i class="fa fa-list" aria-hidden="true" id="pencil"></i>
+                <input type="text" id="add-input" placeholder="adicionar ítem... | Enter - Ir" autofocus>
+            </footer>
+
+            <p id="copyright">&copy;<em> by Edgar Gomes | All Rights Reserved - 2022</em></p>
+
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+    <script src="sw.js"></script>
+
+
+
+
+</body>
+
+</html>

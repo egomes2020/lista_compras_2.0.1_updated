@@ -1,0 +1,25 @@
+{
+    "name": "Lista De Compras",
+    "short_name": "Lista De Compras",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color":  "#fff",
+    "orientation": "portrait-primary",
+    "icons": [
+        
+        {
+            "src": "image/android-chrome-192x192.png",
+            "type": "image/png", 
+            "sizes": "192x192", 
+            "purpose": "any maskable"
+        },
+
+        {
+            "src": "image/android-chrome-512x512.png", 
+            "type": "image/png", 
+            "sizes": "512x512", 
+            "purpose": "any maskable"
+        }
+    ]
+}
