@@ -1,4 +1,8 @@
-<div style="background: #000520; color: #fff; padding: 10px; width:100%; height:100vh; margin:0;">
+<div style="background: #000520; color: #fff; padding: 10px; width:100%; height:100vh; margin:0;font-family: 'Handlee', cursive; font-size:20px">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
 
 <h3 style="color:#fff">PWA App - lista_compras_2.0.1_updated</h2>
 
