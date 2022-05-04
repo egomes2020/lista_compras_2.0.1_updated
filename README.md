@@ -1,4 +1,4 @@
-# PWA === lista_compras_2.0.1_updated
+# PWA - lista_compras_2.0.1_updated
  
 ## Lista De Compras
 
