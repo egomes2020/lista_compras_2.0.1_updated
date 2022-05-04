@@ -218,7 +218,7 @@ body{
     color: tomato;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, .7);
     position: absolute;
-    bottom: 170px !important;
+    bottom: 190px !important;
     right: 30px;
     cursor: pointer;
 }
