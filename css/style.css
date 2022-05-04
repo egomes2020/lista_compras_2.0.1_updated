@@ -325,7 +325,7 @@ body {
 
 /* @MEDIAQUERY 600 px ////////////////////////////////////////////////////////////////////*/
 
-@media (min-width:600px) {
+@media (min-width:700px) {
 
     body {
         background-image: url("../image/bg-medium.jpg"), no-repeat;
