@@ -4,9 +4,11 @@
 
 <br>
 
->## Lista de Compras
+<h1 style="color: #fff"> Lista de Compras :clipboard: </h1> 
 
 <br>
+
+>## Ícones
 
 :wrench: Nova Funcionalidade
 
