@@ -1,28 +1,28 @@
-<div style="background: #000520; color: #fff; padding: 10px; width:100%; height:100vh; margin:0;font-family: 'Handlee', cursive; font-size:20px">
+<div style="background: #000520; color: #fff; padding: 10px; width:100%; height:100vh; margin:0;font-family: 'Amatic SC', cursive; font-size:25px">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
 
 <h3 style="color:#fff">PWA App - lista_compras_2.0.1_updated</h2>
 
-<br>
+---
 
 <h1 style="color: #fff"> Lista de Compras :clipboard: </h1> 
 
 <br>
 
->## Ícones
+><h3 style="padding:5px">Ícones</h3>
 
-:wrench: Nova Funcionalidade
+:wrench: &nbsp; - &nbsp;  Nova Funcionalidade
 
-:up: Atualização
+:up: &nbsp;  - &nbsp; Atualização
 
-:beetle: Correção de Bug
+:beetle: &nbsp; - &nbsp; Correção de Bug
 
-:checkered_flag: Release
+:checkered_flag: &nbsp; - &nbsp; Release
 
 <br>
 
-<img src="image\black_code_logo.JPG" style="width:150px; margin-left: 380px; margin-bottom:-300px">
+<img src="image\black_code_logo.JPG" style="width:150px; margin-bottom:-60px; ">
 </div>
