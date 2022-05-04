@@ -1,12 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;1,200;1,300&display=swap');
 
 
-*{
+* {
     list-style: none;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
     outline: none;
@@ -36,13 +35,13 @@ body{
 }
 
 
- .loader {
+.loader {
     position: relative;
     z-index: 99;
     width: 300px;
     height: 300px;
-   
-   
+
+
 }
 
 /* .loader iframe {
@@ -50,7 +49,8 @@ body{
   height: 300px !important;
 }
  */
-.loader-div, .loader {
+.loader-div,
+.loader {
     animation: fadeOut 2.8s ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -62,7 +62,7 @@ body{
     }
 
     75% {
-        opacity: 1 ;
+        opacity: 1;
         visibility: inherit;
     }
 
@@ -75,10 +75,16 @@ body{
         opacity: 1;
         visibility: visible;
     }
-} 
+}
 
-.wrapper{
+.wrapper {
     background-color: transparent;
+}
+
+
+
+.logo-h1 {
+    display: none;
 }
 
 
@@ -99,9 +105,9 @@ body{
     /* background-color: salmon; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background: url("../image/bg4.jpg"); 
+    background: url("../image/bg4.jpg");
     object-fit: cover;
-    background-position:50% 50%;
+    background-position: 50% 50%;
     background-size: 100%;
 }
 
@@ -118,24 +124,26 @@ body{
     backdrop-filter: blur(10px);
 }
 
-.fas .fa-shopping-cart{
+.fas .fa-shopping-cart {
     color: #fff;
     font-weight: 150px;
     font-size: 10px;
 }
 
-#clear-btn{
-    width : 30px;
+#clear-btn {
+    width: 30px;
     height: 30px;
     position: absolute;
-    right:35px;
+    right: 35px;
     top: 20px;
 }
-#clear-btn i{
+
+#clear-btn i {
     font-size: 30px;
     color: rgb(252, 255, 57);
 }
-#clear-btn i:hover{
+
+#clear-btn i:hover {
     cursor: pointer;
     text-shadow: 1px 3px 5px #000;
     transform: rotate(45deg);
@@ -145,10 +153,10 @@ body{
     /* border: 1px dashed #606060; */
     padding: 5px;
     height: 30px;
-    margin-top:65px;
+    margin-top: 65px;
 }
 
-#pdate{
+#pdate {
     /* border: 1px dashed #606060; */
     width: 100%;
     margin-top: 22px;
@@ -190,21 +198,21 @@ body{
     border-bottom: 1px solid #606060;
     text-transform: capitalize;
     font-size: 20px;
-    color: rgb(1,1, 1);
-    
+    color: rgb(1, 1, 1);
+
 }
 
 .text {
     /* border: 2px dashed black; */
-    color:#000 !important;
+    color: #000 !important;
     position: absolute;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     font-size: 22px;
-    left:65px;
-    top:5px;
+    left: 65px;
+    top: 5px;
     background-color: #FFF;
-    max-width:285px;
+    max-width: 285px;
 }
 
 #shareIcon {
@@ -212,18 +220,18 @@ body{
     color: tomato;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, .7);
     position: absolute;
-    bottom: 170px !important;
+    bottom: 200px !important;
     right: 30px;
     cursor: pointer;
 }
 
- .fa-circle:before {
-     /* border: 2px dashed black; */
+.fa-circle:before {
+    /* border: 2px dashed black; */
     position: absolute;
     font-size: 25px;
-    padding-left:5px;
-    left:15px;
-    top:10px;
+    padding-left: 5px;
+    left: 15px;
+    top: 10px;
 }
 
 .fa-circle:hover {
@@ -234,22 +242,22 @@ body{
 .fa-check-circle:before {
     position: absolute;
     font-size: 25px;
-    padding-left:5px;
-    left:15px;
-    top:10px;
+    padding-left: 5px;
+    left: 15px;
+    top: 10px;
     color: rgba(11, 155, 35, 0.835);
 }
 
-.fa-check-circle:hover{
+.fa-check-circle:hover {
     cursor: pointer;
 }
 
 .fa-trash-alt:before {
     position: absolute;
     font-size: 25px;
-    right:15px;
-    top:10px;
-    
+    right: 15px;
+    top: 10px;
+
 }
 
 .fa-trash-alt:hover {
@@ -257,9 +265,9 @@ body{
     cursor: pointer;
 }
 
-.lineThrough{
+.lineThrough {
     text-decoration: line-through;
-    color : #ccc !important;
+    color: #ccc !important;
 }
 
 /* ADD FOOTER /////////////////////////////////////////////////////////////////////////*/
@@ -267,37 +275,33 @@ body{
     /* border: 1px dashed #606060; */
     padding: 10px;
     height: 50px;
-    /* background-color: salmon; */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background: url("../image/bg4.jpg"); 
+    background: url("../image/bg4.jpg");
     object-fit: cover;
-    background-position:50% 50%;
+    background-position: 50% 50%;
     background-size: 100%;
+    display: flex;
 }
 
 #pencil {
-    /* border: 1px dashed #606060; */
-    font-size: 25pt;
     font-weight: bold;
     color: #fff;
-   font-size: 45px;
-   margin: 5px auto;
-    
+    font-size: 35px;
+    margin: 5px auto;
+
 }
 
 #add-input {
-    /* position: absolute; */
-    /* left: 100px;
-    bottom:108px; */
+    border-radius: 5px;
     height: 35px;
     width: 270px;
     background-color: #fff;
     border: none;
     font-size: 20px;
-    padding-left:10px;
+    padding-left: 10px;
     text-transform: capitalize;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 
@@ -321,18 +325,18 @@ body{
 
 /* @MEDIAQUERY 600 px ////////////////////////////////////////////////////////////////////*/
 
-@media (min-width:600px){
+@media (min-width:600px) {
 
-    body{
+    body {
         background-image: url("../image/bg-medium.jpg"), no-repeat;
         object-fit: contain;
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
-    
+
     }
 
-    .wrapper{
+    .wrapper {
         display: flex;
         margin: -10px auto;
         padding: 21px;
@@ -342,13 +346,13 @@ body{
         align-items: flex-end;
     }
 
-    .logo-h1{
+    .logo-h1 {
         margin-left: 60px;
         width: 50%;
         padding: 10px;
         display: flex;
         flex-wrap: wrap;
-        
+
     }
 
     .logo-h1 h2 {
@@ -366,17 +370,17 @@ body{
     }
 
     #container {
-       width: 35%;
-       height: 100vh;
-       margin-right: 60px;
-      /*  margin:-10px 0 0 700px;
+        width: 35%;
+        height: 100vh;
+        margin-right: 60px;
+        /*  margin:-10px 0 0 700px;
         */
     }
 
     #header {
         height: 200px;
     }
-    
+
     #header h1 {
         /* border: 1px dashed #606060; */
         text-transform: capitalize;
@@ -394,12 +398,12 @@ body{
         /* border: 1px dashed #606060; */
         padding: 5px;
         height: 30px;
-        margin-top:90px;
-      
+        margin-top: 90px;
+
     }
 
 
-    #clear-btn i{
+    #clear-btn i {
         font-size: 30px;
         color: rgb(250, 237, 48);
     }
@@ -421,19 +425,17 @@ body{
         height: 35px;
         width: 75%;
         margin-left: 50px;
-       
+
     }
 
 
     footer {
         display: flex;
     }
-    
+
     #pencil {
-        margin-right:-10px;
+        margin-right: -10px;
     }
-    
-    
+
+
 }
-
-
