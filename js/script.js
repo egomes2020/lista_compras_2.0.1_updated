@@ -74,7 +74,7 @@ function addItem(item, id, done, trash){
     const DONE = done ? CHECK : UNCHECK;
     const LINE = done ? LINE_THROUGH : "";
 
-    const position = "afterbegin"
+    const position = "beforeend"
     const itemElement = `<li class="list-item">
                             <i class="far ${DONE} " job ="complete" id="${id}"></i>
                             <p class="text ${LINE}" contenteditable="true" >${item}</p><i class="fas fa-trash-alt de" job ="delete" id=" ${id}"></i>
@@ -123,6 +123,8 @@ function completeItem(element){
     element.classList.toggle(UNCHECK)
     element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH)
 
+    /* LIST[element.id].done = true; */
+
     LIST[element.id].done = LIST[element.id].done ? false : true
 }
 
@@ -134,7 +136,10 @@ function completeItem(element){
 function removeItem(element){
     element.parentNode.parentNode.removeChild(element.parentNode)
 
-    LIST[element.id].trash = true
+   /*  LIST[element.id].trash = true */
+
+   LIST[element.id].trash = true;
+
 
 }
 
@@ -160,10 +165,10 @@ document.addEventListener("click", function(event){
 
 
 //! FUNCTION LOADER ///////////////////////////////////////////////////////
-window.addEventListener("load", function (){
+/* window.addEventListener("load", function (){
     const loader = document.querySelector(".loader")
     loader.className += " hidden"
-})
+}) */
 
 
 
@@ -177,3 +182,5 @@ share.addEventListener("click", () =>{
         url: ' https://lista-de-compras-2-0-1.web.app/'
     })
 })
+
+
