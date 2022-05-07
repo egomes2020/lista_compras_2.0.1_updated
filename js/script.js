@@ -20,8 +20,35 @@ let LIST, id
 
 //! LOCAL STORAGE ///////////////////////////////////////////////
 
+// ADD ITEM TO LOCAL STORAGE
+function saveLocalStorage() {
+    localStorage.setItem("COMPRAS", JSON.stringify(LIST))
+
+}
 
 
+// GET ITEM FROM LOCAL STORAGE
+let data = localStorage.getItem("COMPRAS");
+
+
+// CHECK IF DATA ISN´T EMPTY
+if (data) {
+    LIST = JSON.parse(data);
+    id = LIST.length
+
+    loadList(LIST)
+} else {
+    LIST = []
+    id = 0
+}
+
+
+//LOAD ITEM TO INTERFACE
+function loadList() {
+    LIST.forEach(function (item) {
+        addItem(item.name, item.id, item.done, item.trash)
+    });
+}
 
 
 
@@ -90,16 +117,14 @@ document.addEventListener("keyup", function (event) {
 
 
             //add item to localstorage
-            
-            
+            saveLocalStorage()
+
             id++
         }
 
-        input.value = ""
+        input.value = "";
     }
 })
-
-
 
 
 
@@ -118,10 +143,7 @@ function completeItem(element) {
 
 //! FUNCTION DELETE ITEM ////////////////////////////////////////////////
 function removeItem(element) {
-    element.parentNode.parentNode.removeChild(element.parentNode);
-
-    LIST[element.id].trash = true;
-
+   element.parentNode.parentNode.removeChild(element.parentNode);
 
 }
 
@@ -136,11 +158,14 @@ document.addEventListener("click", function (event) {
     if (elementJob == "complete") {
         completeItem(element)
     } else if (elementJob == "delete") {
+       
         removeItem(element)
+
+        LIST[element.id].trash = true
     }
 
     //add item to localstorage
-   
+    saveLocalStorage()
 })
 
 
