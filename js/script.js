@@ -19,36 +19,27 @@ let LIST, id
 
 
 //! LOCAL STORAGE ///////////////////////////////////////////////
-
-// ADD ITEM TO LOCAL STORAGE
-function saveLocalStorage() {
-    localStorage.setItem("COMPRAS", JSON.stringify(LIST))
-
-}
-
-
 // GET ITEM FROM LOCAL STORAGE
-let data = localStorage.getItem("COMPRAS");
+let data = localStorage.getItem("TODO")
 
-
-// CHECK IF DATA ISN´T EMPTY
-if (data) {
+// CHECK IF DATA IS NOT EMPTY
+if(data){
     LIST = JSON.parse(data);
     id = LIST.length
-
     loadList(LIST)
-} else {
+}else{
+    // if data is not empty
     LIST = []
     id = 0
 }
 
+// LOAD ITEMS TO USER INTERFACE
+ function loadList(array){
+     array.forEach(function(item){
+         addToDo(item.name, item.id, item.done, item.trash)
+     })
+ }
 
-//LOAD ITEM TO INTERFACE
-function loadList() {
-    LIST.forEach(function (item) {
-        addItem(item.name, item.id, item.done, item.trash)
-    });
-}
 
 
 
@@ -69,7 +60,7 @@ const options = {
 }
 
 const today = new Date()
-date.innerText = today.toLocaleDateString("br", options);
+date.innerHTML = today.toLocaleDateString("br", options);
 
 
 
@@ -79,20 +70,20 @@ date.innerText = today.toLocaleDateString("br", options);
 //! FUNCTION ADD ITEM //////////////////////////////////////////
 function addItem(item, id, done, trash) {
 
-    if (trash) {
-        return
-    };
+    if (trash){return};
 
     const DONE = done ? CHECK : UNCHECK;
     const LINE = done ? LINE_THROUGH : "";
 
-    const position = "afterbegin";
+
     const itemElement = `<li class="list-item">
                             <i class="far ${DONE} " job ="complete" id="${id}"></i>
-                            <p class="text ${LINE}" contenteditable="true" job="" >${item}</p>
+                            <p class="text ${LINE}" contenteditable="true">${item}</p>
                             <i class="fas fa-trash-alt de" job ="delete" id=" ${id}"></i>
                         </li>
                         `;
+
+    const position = "afterbegin";
 
     list.insertAdjacentHTML(position, itemElement)
 
@@ -117,7 +108,7 @@ document.addEventListener("keyup", function (event) {
 
 
             //add item to localstorage
-            saveLocalStorage()
+            localStorage.setItem("COMPRAS", JSON.stringify(LIST))
 
             id++
         }
@@ -143,8 +134,9 @@ function completeItem(element) {
 
 //! FUNCTION DELETE ITEM ////////////////////////////////////////////////
 function removeItem(element) {
-   element.parentNode.parentNode.removeChild(element.parentNode);
+    element.parentNode.parentNode.removeChild(element.parentNode);
 
+    LIST[element.id].trash = true;
 }
 
 
@@ -158,14 +150,13 @@ document.addEventListener("click", function (event) {
     if (elementJob == "complete") {
         completeItem(element)
     } else if (elementJob == "delete") {
-       
+
         removeItem(element)
 
-        LIST[element.id].trash = true
     }
 
     //add item to localstorage
-    saveLocalStorage()
+    localStorage.setItem("COMPRAS", JSON.stringify(LIST))
 })
 
 
